@@ -8,15 +8,19 @@
                 @foreach ($employees as $employee)
                     <li>
                         <span>
-                            {{ $employee -> firstname }}
-                            {{ $employee -> lastname }}
+                            <a href="{{ route('show_employee', $employee -> id) }}">
+                                {{ $employee -> firstname }}
+                                {{ $employee -> lastname }}
+                            </a>
                         </span>
                         <span>
                             ->
                         </span>
                         @foreach ($employee -> tasks as $task)
                             <span>
-                                {{ $task -> title }}
+                                <a href="{{ route('show_task', $task -> id) }}">
+                                    {{ $task -> title }}
+                                </a>
                                 @if ($loop -> index < ($loop -> count - 1))
                                     -
                                 @endif

@@ -19,10 +19,11 @@ header{
     line-height: 100px;
     background-color: lightblue;
 
-    h1{
+    a{
         color: #fff;
         text-shadow: 2px 3px #ccc;
         text-transform: uppercase;
+        text-decoration: none;
     }
 }
 
